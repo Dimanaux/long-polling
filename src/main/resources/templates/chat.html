@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Join us</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+
+    <script src="/js/chat.js"></script>
+</head>
+<body>
+<div class="container">
+
+    <div>
+        <label>New message:
+            <input id="message-text" type="text" name="text" placeholder="Say hi">
+            <button onclick="sendMessage('message-text')" class="btn btn-primary">Send!</button>
+        </label>
+    </div>
+
+    <h1>Messages:</h1>
+
+    <ul id="messages-list">
+    </ul>
+
+    <script>
+        (function () {
+            fetchHistory();
+            fetchNewMessages();
+        }());
+    </script>
+
+</div>
+</body>
+</html>
